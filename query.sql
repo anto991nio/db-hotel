@@ -16,7 +16,7 @@ WHERE YEAR(date_of_birth) > 1988;
 
 SELECT * 
 FROM ospiti 
-WHERE YEAR(`created_at`)-YEAR(`date_of_birth`) > 20;
+WHERE YEAR(CURRENT_DATE)-YEAR(`date_of_birth`) > 20;
 
 /* 4.Seleziona tutti gli ospiti il cui nome inizia con la D */
 SELECT * 
@@ -45,7 +45,7 @@ WHERE `document_type`="Driver License"
 
 SELECT COUNT(*) 
 FROM `paganti` 
-WHERE `ospite_id`<> "NULL"
+WHERE `ospite_id` IS NOT NULL
 
 /* 9.Quanti posti letto ha l’hotel in totale? */
 
