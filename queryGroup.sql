@@ -27,3 +27,5 @@ FROM `prenotazioni_has_ospiti`
 GROUP BY `ospite_id`
 ORDER BY COUNT(`ospite_id`) DESC
 LIMIT 1;
+
+
